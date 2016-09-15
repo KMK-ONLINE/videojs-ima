@@ -753,7 +753,6 @@
     player.ima.changeSource_ = function(contentSrc, playOnLoad) {
       // Only try to pause the player when initialised with a source already
       if (!!player.currentSrc()) {
-        player.currentTime(0);
         player.pause();
       }
       if (contentSrc) {
