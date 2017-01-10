@@ -163,26 +163,38 @@ test('player dispose event should clear interval resizeCheckIntervalHandle', fun
      adTagUrl: ''
    };
 
-   var counter = 0;
+   var counterResizeCheckInterval = counterUpdateTimeInterval = counterSeekCheckInterval = 0;
 
    player.ima(options);
    player.ima.initializeAdDisplayContainer();
    player.ima.requestAds();
    player.ima.checkForResize_ = function(){
-     counter += 1;
+     counterResizeCheckInterval += 1;
+   };
+   player.ima.updateCurrentTime_ = function(){
+     counterUpdateTimeInterval += 1;
+   };
+   player.ima.checkForSeeking_ = function(){
+     counterSeekCheckInterval += 1;
    };
    player.play();
    setTimeout(function(){
-     ok(counter == 1, "checkForResize_ interval called once");
+     //counterResizeCheckInterval triggered every 250ms, 
+     //counterUpdateTimeInterval and counterSeekCheckInterval triggered every 1000ms
+     ok(counterResizeCheckInterval == 4, "checkForResize_ interval called once");
+     ok(counterUpdateTimeInterval == 1, "updateCurrentTime interval called once");
+     ok(counterSeekCheckInterval == 1, "checkForSeeking_ interval called once");
      player.trigger('dispose');
-   }, 300);
+   }, 1100);
 
 
    player.on('dispose', function(){
      setTimeout(function(){
        start();
-       ok(counter == 1, "checkForResize_ interval should be cleared on player dispose");
-     }, 600);
+       ok(counterResizeCheckInterval == 4, "checkForResize_ interval should be cleared on player dispose");
+       ok(counterUpdateTimeInterval == 1, "updateCurrentTime interval should be cleared on player dispose");
+       ok(counterSeekCheckInterval == 1, "checkForSeeking_ interval should be cleared on player dispose");
+     }, 1100);
    });
    stop();
 }); 

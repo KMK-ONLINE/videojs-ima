@@ -1179,6 +1179,8 @@
 
     player.on('dispose',function(){
       clearInterval(resizeCheckIntervalHandle);
+      clearInterval(seekCheckIntervalHandle);
+      clearInterval(updateTimeIntervalHandle);
     });
 
     var contrib_ads_defaults = {
