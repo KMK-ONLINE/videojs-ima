@@ -1177,6 +1177,10 @@
 
     player.on('ended', localContentEndedListener);
 
+    player.on('dispose',function(){
+      clearInterval(resizeCheckIntervalHandle);
+    });
+
     var contrib_ads_defaults = {
       debug: settings.debug,
       timeout: settings.timeout,

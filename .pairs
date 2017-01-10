@@ -1,0 +1,79 @@
+pairs:
+  ts: Tommy Sullivan
+  mk: Mohan Krishnan
+
+  # dev-ops
+  aw: Addhe Warman
+  sg: Sugandi
+  rs: Robertus Suseno
+  hm: Hofid Mashudi
+  ra: Ridho Adya Pangestu
+  cec: Cecep Mahbub
+  paw: Peter Andi Wiguna
+
+  # publishing
+  nr: Nofriandi Ramenta
+  at: Ahmad Tanwir; ata
+  ey: Enang Yusup
+  fm: Fadhil Mandaga
+  mi: Michael Himawan; himawan
+  an: Andy Sentosa; sentosa
+  al: Andy Librian
+  mg: Muhammad Gantino; tino
+  yo: Yohan
+  njr: Nathan Runtuwene
+  pk: Pinto Luhur Karsanda
+  mkw: Marhadiasha Kusumawardhana
+  ch: Christian Hadirahardja
+  bpj: Byan Prihandana Jati
+  ard: Arif Ramadhan; ardhan
+  es: Ericko Samudera
+  joe: Joe Erik Carla Wijaya
+  br: Burhan Dewantara
+  mh: Meirza Auriq Heyder
+
+  # qa
+  pi: Panji Indrajit
+  dj: Dewi Jayanti
+  ira: Nurazizah
+
+  # vidio
+  wa: Wisnu Alamsyah; wisnu
+  iwn: Kurniawan
+  hu: Hendra Uzia
+  kak: Kunto Aji Kristianto
+  ap: Agung Prasetyo
+  mf: Ageng Mufti Syafii Hakim; mufti
+  tp: Tito Pandu Brahmanto
+  ht: Hendyanto
+  smw: Sukoreno Mukti Widodo; reno
+  ai: Ahmad Ibrahim; Baim
+
+  # mobile
+  as: Djonny Steven Abenz Sim; asen
+  hfz: Hafiz
+  jm: Jimmy Suhartono
+  rds: Rindang Septyan
+  dd: Dino Dwiyaksa
+  rc: Rakhmat Cahyadi
+  sw: Sugeng Wibowo
+  rt: Rencana Tarigan
+  si: Suprianto PusoroTrisno
+  tk: Tristanto Kurniawan
+
+  # analytics
+  sa: Yap Sok Ann
+  hbl: Hafiz Badrie Lubis ; hafizbadrie
+  ws: William Shallum
+  sha: Septian Hari Nugroho
+  fj: Fajri Koto
+  git: Gita Venesia Setiadi
+  yec: Yahya Eru Cakra
+  frf: Fajar Reza Firmansyah
+
+  # support
+  mm: Muhammad Muis Muhidin; muis
+
+email:
+  prefix: pair
+  domain: kmkonline.co.id

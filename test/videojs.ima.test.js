@@ -155,3 +155,34 @@ test('onAdError_ should trigger adserror with data from google.ima.AdError and g
 
   stop();
 });
+
+module("Player Events", { setup: setup });
+test('player dispose event should clear interval resizeCheckIntervalHandle', function(){
+   var options = {
+     id: 'video',
+     adTagUrl: ''
+   };
+
+   var counter = 0;
+
+   player.ima(options);
+   player.ima.initializeAdDisplayContainer();
+   player.ima.requestAds();
+   player.ima.checkForResize_ = function(){
+     counter += 1;
+   };
+   player.play();
+   setTimeout(function(){
+     ok(counter == 1, "checkForResize_ interval called once");
+     player.trigger('dispose');
+   }, 300);
+
+
+   player.on('dispose', function(){
+     setTimeout(function(){
+       start();
+       ok(counter == 1, "checkForResize_ interval should be cleared on player dispose");
+     }, 600);
+   });
+   stop();
+}); 
