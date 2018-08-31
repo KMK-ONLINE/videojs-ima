@@ -1252,5 +1252,6 @@
     });
   };
 
-  videojs.plugin('ima', imaPlugin);
+  const registerPlugin = videojs.registerPlugin || videojs.plugin;
+  registerPlugin('ima', imaPlugin);
 }(window.videojs));
