@@ -546,7 +546,6 @@ PlayerWrapper.prototype.onAdsReady = function() {
 PlayerWrapper.prototype.changeSource = function(contentSrc, playOnLoad) {
   // Only try to pause the player when initialised with a source already
   if (this.vjsPlayer.currentSrc()) {
-    this.vjsPlayer.currentTime(0);
     this.vjsPlayer.pause();
   }
   if (contentSrc) {
